@@ -1,6 +1,5 @@
 let 方角 = 0
-input.onButtonPressed(Button.A, function on_button_pressed_a() {
-    
+input.onButtonPressed(Button.A, function () {
     方角 = input.compassHeading()
     if (方角 < 45) {
         basic.showArrow(ArrowNames.North)
@@ -13,5 +12,7 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     } else {
         basic.showArrow(ArrowNames.North)
     }
-    
+})
+input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
 })
